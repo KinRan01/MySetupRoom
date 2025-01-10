@@ -1,76 +1,47 @@
 <div class="container">
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
 <button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalTambah">
     <i class="bi bi-plus-lg"></i> Tambah Article
 </button>
-<button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalEdit<?= $row["id"] ?>">
-    <i class="bi bi-plus-lg"></i> Edit Article
-</button>
-<button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalHapus<?= $row["id"] ?>">
-    <i class="bi bi-plus-lg"></i> Hapus Article
-</button>
+
     <div class="row">
         <div class="table-responsive" id="article_data">
             
         </div>
         <!-- Awal Modal Tambah-->
-            <div class="modal fade" id="modalTambah" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Article</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form method="post" action="" enctype="multipart/form-data">
-                            <div class="modal-body">
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInput" class="form-label">Judul</label>
-                                    <input type="text" class="form-control" name="judul" placeholder="Tuliskan Judul Artikel" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="floatingTextarea2">Isi</label>
-                                    <textarea class="form-control" placeholder="Tuliskan Isi Artikel" name="isi" required></textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInput2" class="form-label">Gambar</label>
-                                    <input type="file" class="form-control" name="gambar">
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <input type="submit" value="simpan" name="simpan" class="btn btn-primary">
-                            </div>
-                        </form>
+<div class="modal fade" id="modalTambah" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Article</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="post" action="" enctype="multipart/form-data">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Judul</label>
+                        <input type="text" class="form-control" name="judul" placeholder="Tuliskan Judul Artikel" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="floatingTextarea2">Isi</label>
+                        <textarea class="form-control" placeholder="Tuliskan Isi Artikel" name="isi" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Gambar</label>
+                        <input type="file" class="form-control" name="gambar">
                     </div>
                 </div>
-            </div>
-            <!-- Akhir Modal Tambah-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" value="simpan" name="simpan" class="btn btn-primary">
                 </div>
-            </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Akhir Modal Tambah-->
+    </div>
+</div>
 
 <script>
 $(document).ready(function(){
@@ -79,11 +50,9 @@ $(document).ready(function(){
         $.ajax({
             url : "article_data.php",
             method : "POST",
-            data : {
-			hlm: hlm
-			},
+            data : { hlm: hlm},
             success : function(data){
-                $('#article_data').html(data);
+                    $('#article_data').html(data);
             }
         })
     }
@@ -91,7 +60,7 @@ $(document).ready(function(){
     $(document).on('click', '.halaman', function(){
     var hlm = $(this).attr("id");
     load_data(hlm);
-    }); 
+}); 
 });
 </script>
 

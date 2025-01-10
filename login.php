@@ -11,7 +11,7 @@ if (isset($_SESSION['username'])) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $username = $_POST['user'];
+  $username = $_POST['username'];
   
   //menggunakan fungsi enkripsi md5 supaya sama dengan password  yang tersimpan di database
   $password = md5($_POST['password']);

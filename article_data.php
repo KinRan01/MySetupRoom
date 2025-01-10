@@ -20,10 +20,6 @@
                     $sql = "SELECT * FROM article ORDER BY tanggal DESC LIMIT $limit_start, $limit";
                     $hasil = $conn->query($sql);
 
-                    $sql = "SELECT * FROM article ORDER BY tanggal DESC";
-                    $hasil = $conn->query($sql);
-
-                    $no = 1;
                     while ($row = $hasil->fetch_assoc()) {
                     ?>
                         <tr>
