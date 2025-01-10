@@ -126,7 +126,7 @@ include "koneksi.php";
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">My Dream Setup</a>
+            <a class="navbar-brand fw-bold" href="#">My Setup Room</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -158,7 +158,7 @@ include "koneksi.php";
     <section class="hero text-sm-start">
         <div class="container">
           <div class="d-sm-flex flex-sm-row-reverse align-items-center">
-              <img src="desksetup5.png" alt="Hero Image" class="img-fluid" width="300">
+          <img src="img/desksetup5.png" alt="Hero Image" class="img-fluid" width="300">
                   <div>
                       <h1 class="fw-bold display-4">Make Your Room More Than Just a Place to Work</h1>
                       <h4 class="lead display-6">Ubah Ruanganmu Jadi Lebih dari Sekadar Tempat Kerja</h4>
@@ -217,10 +217,10 @@ include "koneksi.php";
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="desksetup2.jpg" class="d-block w-100" alt="Gallery Image 1">
+                    <img src="img/desksetup2.jpg" class="d-block w-100" alt="Gallery Image 1">
                     </div>
                     <div class="carousel-item">
-                        <img src="desksetup1.jpg" class="d-block w-100" alt="Gallery Image 2">
+                    <img src="img/desksetup1.jpg" class="d-block w-100" alt="Gallery Image 2">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
